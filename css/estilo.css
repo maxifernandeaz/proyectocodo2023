@@ -21,17 +21,25 @@ header {
 
 nav {
     background-color: #252325;
+    
+
+    
 }
 
 nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 10px;
+    
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    flex: auto;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
 }
 
 nav a {
@@ -39,7 +47,9 @@ nav a {
     color: #fff;
     font-weight: bold;
 }
-
+nav ul li:hover{
+    background-color: #6d4563;
+}
 main {
    
     margin: 10px ;
@@ -54,7 +64,7 @@ section {
 }
 
 h2 {
-    color: #81101a;
+    color: black;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -88,7 +98,7 @@ textarea {
     border-radius: 4px;
 }
 p, li, a {
-    color: #81101a;
+    color: black;
 }
 hr {
     color: #431f49;
