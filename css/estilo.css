@@ -144,3 +144,26 @@ footer {
 .catalogo li{
 padding: 5px;
 }
+
+
+.catalogo {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalogo li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.catalogo img {
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.catalogo h3 {
+    margin: 0;
+}
+
