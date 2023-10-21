@@ -1,0 +1,35 @@
+[33mcommit fc6516714e8bffaa91ebb42d710643d89a175eee[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: maxifernandeaz <maximilianofernandezbaez@gmail.com>
+Date:   Mon Oct 16 11:50:41 2023 -0300
+
+    carrusel de imagenes, google fonts, modificacion html.contacto y estilos css
+
+[33mcommit d029fdace087c5f0f6fdc635d22a8bf232610607[m
+Author: maxifernandeaz <maximilianofernandezbaez@gmail.com>
+Date:   Tue Sep 26 10:09:04 2023 -0300
+
+    barra de navegacion responsive, iframe google, catalogo de producstos
+
+[33mcommit cf704799c665bdbcc21fd8aca30cf4a3dcbcff73[m
+Author: maxifernandeaz <maximilianofernandezbaez@gmail.com>
+Date:   Tue Sep 26 10:03:03 2023 -0300
+
+    se cambio nombre archivo HTML beneficios por registro
+
+[33mcommit 87655081f6e6e8e57fe12c0a949e953f932e132d[m
+Author: maxifernandez <maximilianofernandezbaez@gmail.com>
+Date:   Sun Sep 17 11:33:26 2023 -0300
+
+    estilos css, header y footer en todos los archivos
+
+[33mcommit c43f6ee8ed0f5e20faec3324b75e7d0374c92ac0[m
+Author: maxifernandez <maximilianofernandezbaez@gmail.com>
+Date:   Sat Sep 16 08:03:13 2023 -0300
+
+    agregamos el resto de los archivos
+
+[33mcommit 20996ad93189653bbc0ec3622e6c0e5be306323b[m
+Author: maxifernandez <maximilianofernandezbaez@gmail.com>
+Date:   Sat Sep 16 07:59:24 2023 -0300
+
+    agregamos index.html
