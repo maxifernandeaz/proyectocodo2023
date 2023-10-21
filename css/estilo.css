@@ -1,3 +1,4 @@
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +7,9 @@
 
 /* Estilos generales */
 body {
-    
-font-family: 'Roboto', sans-serif;
-
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
-}
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
 }
 
 header {
@@ -22,18 +17,17 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-
 }
 
 nav {
     background-color: #252325;
+    
 
-
-
+    
 }
 
 nav ul {
-
+    
     padding: 0;
     list-style: none;
     display: flex;
@@ -53,14 +47,12 @@ nav a {
     color: #fff;
     font-weight: bold;
 }
-
-nav ul li:hover {
+nav ul li:hover{
     background-color: #6d4563;
 }
-
 main {
-
-    margin: 10px;
+   
+    margin: 10px ;
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
@@ -99,25 +91,19 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="date"],
-textarea
- {
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-p,
-li,
-a {
+p, li, a {
     color: black;
 }
-
 hr {
     color: #431f49;
-
+    
 }
 
 button[type="submit"] {
@@ -139,7 +125,7 @@ aside {
     margin-top: 20px;
 }
 
-
+/* Pie de página */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -148,17 +134,16 @@ footer {
     clear: both;
 }
 
-#meanings li,
-ol {
+#meanings li, ol{
     background-color: #fff;
     padding: 5px;
     list-style-type: disc;
     margin-left: 10px;
-
+    
 }
 
-.catalogo li {
-    padding: 5px;
+.catalogo li{
+padding: 5px;
 }
 
 
@@ -183,113 +168,150 @@ ol {
     margin: 0;
 }
 
-.carousel-container .slider-frame {
-    width: 400px;
-    height: auto;
-    margin: 20px auto 0;
-    overflow: hidden;
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
 
-.carousel-container .slider {
-    display: flex;
-    padding: 0;
-    width: 1600px;
-    animation: slide 16s linear infinite;
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
 }
 
-.carousel-container .slide {
-    list-style: none;
-    width: 400px;
+.formulario__grupo-input {
+	position: relative;
 }
 
-.carousel-container img {
-    width: 100%;
-    height: auto;
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(0);
-    }
-    30% {
-        transform: translateX(-400px);
-    }
-    55% {
-        transform: translateX(-400px);
-    }
-    60% {
-        transform: translateX(-800px);
-    }
-    85% {
-        transform: translateX(-800px);
-    }
-    90% {
-        transform: translateX(-1200px);
-    }
-    100% {
-        transform: translateX(-1200px);
-    }
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
 }
 
 
-@media screen and (max-width: 768px) {
-    header {
-        font-size: 20px; 
-    }
 
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        padding: 10px 0; 
-    }
-
-    main {
-        margin: 5px; 
-    }
-
-    aside {
-        width: 100%; 
-        float: none; 
-        margin-top: 10px;
-    }
-
-}
-
-
-@media screen and (max-width: 480px) {
-    header {
-        font-size: 18px; 
-    }
-
-   
-}
-
-@media screen and (min-width: 1200px) {
-    header {
-        font-size: 28px; 
-    }
-
-    nav ul {
-        flex-direction: row; 
-    }
-
-    nav ul li {
-        padding: 10px; 
-    }
-
-    main {
-        margin: 20px; 
-    }
-
-    aside {
-        width: 30%; 
-        margin-top: 20px;
-    }
-
-}
 
