@@ -46,3 +46,4 @@ document.getElementById('formulario').addEventListener('submit', function (event
         document.getElementById('proveedorProducto').value = "";
         });
 });
+

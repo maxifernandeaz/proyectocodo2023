@@ -64,3 +64,4 @@ function updateCartDisplay() {
   var totalCost = calculateTotalCost();
   cartTotal.textContent = totalCost.toFixed(2);
 }
+

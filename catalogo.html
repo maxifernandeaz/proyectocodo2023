@@ -20,67 +20,85 @@
                 <li><a href="catalogo.html">Nuestro Catálogo</a></li>
                 <li><a href="registro.html">Registrate</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="index1.html">Clave De Acceso</a></li>
+               <li><a href="index1.html">Clave De Acceso</a></li>
+
             </ul>
         </nav>
     </header>
 
 
     <main>
+        <aside id="cart-summary">
+            <h2>Resumen del Carrito:</h2>
+            <ul id="cart-list"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="redirectToPayment()">Pagar</button>
+        </aside>
         <h2 class="animate__animated animate__fadeInDown">Catálogo de Productos:</h2>
         <ul class="catalogo">
 
             <li>
-                <div>
+                <div id="equipoEntrenamiento">
                     <h3>Equipo de Entrenamiento</h3>
                     <p>Elementos esenciales para llevar a cabo un entrenamiento óptimo y completo</p>
                 </div>
 
             <li>
                 <img src="img/barra.jpg" alt="Barras">
-                <div>
+                <div id="barra">
                     <h3>Barras</h3>
                     <p>Barras de hierro sólido para realizar ejercicios con alto requerimiento de carga</p>
+                    <button class="add-to-cart-btn" data-price="1000" onclick="addToCart('1', 'Barras', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
             <li>
                 <img src="img/discos.jpg" alt="Discos">
-                <div>
+                <div id="discos">
                     <h3>Discos</h3>
                     <p>Nuestro kit incluye discos desde 1kg hasta 20kg, en cantidades más que suficientes para un
                         entrenamiento completo</p>
+                    <button class="add-to-cart-btn" data-price="1000" onclick="addToCart('2', 'Discos', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
 
             <li>
                 <img src="img/mancuernas.jpg" alt="Mancuernas">
-                <div>
+                <div id="mancuernas">
                     <h3>Mancuernas</h3>
                     <p>Mancuernas de cómodo agarre, desde 1kg hasta 30kg de peso.</p>
+                    <button class="add-to-cart-btn" data-price="1000" onclick="addToCart('3', 'Mancuernas', 1)">Añadir
+                        al
+                        carrito</button>
                 </div>
             </li>
 
             </li>
 
             <li>
-                <div>
+                <div id="accesorios">
                     <h3>Accesorios</h3>
                     <p>Elementos complementarios para completar tu gimnasio</p>
                 </div>
 
             <li>
                 <img src="img/Bancos.jpg" alt="Bancos">
-                <div>
+                <div id="bancos">
                     <h3>Bancos</h3>
                     <p>Bancos ajustables al requerimiento de cada ejercicio.</p>
+                    <button class="add-to-cart-btn" data-price="1000" onclick="addToCart('5', 'Bancos', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
 
             <li>
                 <img src="img/Extras.jpg" alt="extras">
-                <div>
+                <div id="extras">
                     <h3>Extras</h3>
                     <p>Ganchitos, cadenas, poleas y demás elementos para completar tu gimnasio</p>
+                    <button class="add-to-cart-btn" data-price="1000" onclick="addToCart('5', 'Extras', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
 
@@ -97,32 +115,41 @@
 
             <li>
                 <img src="img/lockers.jpg" alt="Lockers">
-                <div>
+                <div id="lockers">
                     <h3>Lockers</h3>
                     <p>Podés guardar lo que necesites en estos compartimentos. Incluye llaves.</p>
+                    <button class="add-to-cart-btn" data-price="1000" onclick="addToCart('6', 'Lockers', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
 
             <li>
                 <img src="img/soportemanc.jpg" alt="Soporte para mancuernas">
-                <div>
+                <div id="soporteMancuernas">
                     <h3>Soporte para mancuernas</h3>
                     <p>Aquí podés dejar tus mancuernas mientras no las usas. El compartimento es cómo y optimiza el
                         espacio</p>
+                    <button class="add-to-cart-btn" data-price="1000"
+                        onclick="addToCart('7', 'SoporteMancuernas', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
 
             <li>
                 <img src="img/soportediscos.jpg" alt="Soporte para discos">
-                <div>
+                <div id="soporteDiscos">
                     <h3>Soporte para discos y barras</h3>
                     <p>Este es el lugar para que dejes tus discos y barras. Soportan grandes cantidades de peso.</p>
+                    <button class="add-to-cart-btn" data-price="1000"
+                        onclick="addToCart('8', 'SoporteDiscos', 1)">Añadir al
+                        carrito</button>
                 </div>
             </li>
 
             </li>
         </ul>
     </main>
+
 
     <hr>
     <footer>
@@ -135,3 +162,4 @@
         </div>
 
     </footer>
+    <script src="js/carro.js"></script>
