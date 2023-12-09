@@ -1,4 +1,5 @@
-const URL = "http://127.0.0.1:5000/"
+const URL = "http://127.0.0.1:5000/";
+
 const app = Vue.createApp({
     data() {
         return {
@@ -8,10 +9,12 @@ const app = Vue.createApp({
             precio: '',
             proveedor: '',
             imagen_url: '',
+            imagenSeleccionada: null,  // Agregamos esta línea para definir la propiedad imagenSeleccionada
             imagenUrlTemp: null,
             mostrarDatosProducto: false,
         };
     },
+
     methods: {
         obtenerProducto() {
             fetch(URL + 'productos/' + this.codigo)
@@ -19,10 +22,10 @@ const app = Vue.createApp({
                     if (response.ok) {
                         return response.json()
                     } else {
-                        //Si la respuesta es un error, lanzamos una excepción para ser "catcheada" más adelante en el catch.
-                        throw new Error('Error al obtener los datos del producto.')
+                        throw new Error('Error al obtener los datos del producto.');
                     }
                 })
+
                 .then(data => {
                     this.descripcion = data.descripcion;
                     this.cantidad = data.cantidad;
@@ -34,7 +37,7 @@ const app = Vue.createApp({
                 .catch(error => {
                     console.log(error);
                     alert('Código no encontrado.');
-                })
+                });
         },
         seleccionarImagen(event) {
             const file = event.target.files[0];
@@ -49,25 +52,20 @@ const app = Vue.createApp({
             formData.append('proveedor', this.proveedor);
             formData.append('precio', this.precio);
             if (this.imagenSeleccionada) {
-                formData.append('imagen', this.imagenSeleccionada,
-
-                    this.imagenSeleccionada.name);
-
+                formData.append('imagen', this.imagenSeleccionada, this.imagenSeleccionada.name);
             }
-            //Utilizamos fetch para realizar una solicitud PUT a la API y guardar los cambios.
 
+            // Utilizamos fetch para realizar una solicitud PUT a la API y guardar los cambios.
             fetch(URL + 'productos/' + this.codigo, {
                 method: 'PUT',
                 body: formData,
+                mode: 'cors'  // Agrega este encabezado
             })
                 .then(response => {
-                    //Si la respuesta es exitosa, utilizamos response.json() para parsear la respuesta en formato JSON.
                     if (response.ok) {
-                        return response.json()
+                        return response.json();
                     } else {
-                        //Si la respuesta es un error, lanzamos una excepción.
-
-                        throw new Error('Error al guardar los cambios del producto.')
+                        throw new Error('Error al guardar los cambios del producto.');
                     }
                 })
                 .then(data => {
@@ -79,6 +77,7 @@ const app = Vue.createApp({
                     alert('Error al actualizar el producto.');
                 });
         },
+
         limpiarFormulario() {
             this.codigo = '';
             this.descripcion = '';
@@ -91,4 +90,7 @@ const app = Vue.createApp({
         }
     }
 });
+
 app.mount('#app');
+
+
