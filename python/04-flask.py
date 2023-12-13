@@ -1,5 +1,6 @@
 # Instalar con pip install Flask
 from flask import Flask, request, jsonify
+
 from flask import request
 
 # Instalar con pip install flask-cors
@@ -124,13 +125,13 @@ class Catalogo:
 # Cuerpo del programa
 # --------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host="localhost", user="root", password="", database="gymapp")
-# catalogo = Catalogo(host='maxifb.mysql.pythonanywhere-services.com', user='maxifb', password='katupe2023', database='maxifb$gymapp')
+#catalogo = Catalogo(host="localhost", user="root", password="", database="gymapp")
+catalogo = Catalogo(host='maxifb.mysql.pythonanywhere-services.com', user='maxifb', password='katupecu30', database='maxifb$gymapp')
 # Carpeta para guardar las imagenes
-ruta_destino = "./static/css/imagenes"
+#ruta_destino = "./static/css/imagenes/"
 
 
-# ruta_destino = '/home/maxifb/mysite/static/img/'
+
 # --------------------------------
 @app.route("/productos", methods=["GET"])
 def listar_productos():
@@ -219,3 +220,5 @@ def modificar_producto(codigo):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
